@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AppTaiShun</string>
+    <dimen name="textSize">14px</dimen>
+</resources>

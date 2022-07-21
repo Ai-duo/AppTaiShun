@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="tf"
+            type="android.graphics.Typeface" />
+
+        <variable
+            name="time"
+            type="String" />
+
+        <variable
+            name="live"
+            type="com.kd.apptaishun.Live" />
+        <variable
+            name="wea"
+            type="com.kd.apptaishun.Wea" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="256px"
+        android:layout_height="128px"
+        android:background="#000"
+        android:orientation="vertical">
+
+        <TextView
+            setExtraTypeface="@{tf}"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{time}"
+            android:textColor="@color/sideColor"
+            android:textSize="16px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    setExtraTypeface="@{tf}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@{live.wea_wendu}"
+                    android:textColor="@color/centerColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    setExtraTypeface="@{tf}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@{live.wea_shidu}"
+                    android:textColor="@color/centerColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    setExtraTypeface="@{tf}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@{live.wea_fengsu}"
+                    android:textColor="@color/centerColor"
+                    android:textSize="@dimen/textSize" />
+                <TextView
+                    setExtraTypeface="@{tf}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@{live.wea_qiya}"
+                    android:textColor="@color/centerColor"
+                    android:textSize="@dimen/textSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    setExtraTypeface="@{tf}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@{live.wea_yuliang}"
+                    android:textColor="@color/centerColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    setExtraTypeface="@{tf}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@{live.wea_houryuling}"
+                    android:textColor="@color/centerColor"
+                    android:textSize="@dimen/textSize" />
+
+
+                <TextView
+                    setExtraTypeface="@{tf}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@{live.wea_fengxiang}"
+                    android:textColor="@color/centerColor"
+                    android:textSize="@dimen/textSize" />
+                <TextView
+                    setExtraTypeface="@{tf}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@{live.wea_o2}"
+                    android:textColor="@color/centerColor"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                setExtraTypeface="@{tf}"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="天气预报"
+                android:textColor="@color/sideColor"
+                android:textSize="15px" />
+            <com.kd.apptaishun.MarqueeView
+                setMarqueeViewTypeface="@{tf}"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:background="#000"
+                app:marqueeview_text_color="@color/sideColor"
+                app:marqueeview_text_size="12"
+                app:marqueeview_text_speed="0.6"
+                app:setText="@{wea.wea_txt1}" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
